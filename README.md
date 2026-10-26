@@ -133,3 +133,5 @@ Deleting copy operations prevents two MessageInbox objects from accidentally sha
 
 I used ChatGPT to help me understand the assignment requirements.
 ChatGPT helped me understand singly linked lists, head and tail pointers, and how new and delete are used for dynamic memory management.
+To verify my work, I ran the main program and compared the results with the expected values. I also used the instructor's public validator, which passed on GitHub Actions.
+I learned more about how head and tail pointers work and why dynamically allocated nodes must be deleted to avoid memory leaks.
