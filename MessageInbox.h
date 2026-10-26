@@ -1,4 +1,3 @@
-
 #ifndef MESSAGEINBOX_H
 #define MESSAGEINBOX_H
 
