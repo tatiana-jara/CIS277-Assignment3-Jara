@@ -50,29 +50,23 @@ It receives messages, marks a message as read, deletes a message, and reuses the
 
 ## Tests and Results
 
+I compiled and ran my `main.cpp` program to verify the required 20-byte message inbox example.
 
-The instructor's Assignment 3 Preflight workflow
-completed successfully on GitHub Actions.
+| Test | Expected Result | Actual Result | Status |
+|---|---|---|---|
+| Receive Maya | Accepted, 3 bytes used | Accepted, 3 bytes used | PASS |
+| Receive Noah | Accepted, 12 bytes used | Accepted, 12 bytes used | PASS |
+| Receive Eli | Rejected, 12 bytes used | Rejected, 12 bytes used | PASS |
+| Read Maya | Read: Yes, 12 bytes used | Read: Yes, 12 bytes used | PASS |
+| Delete Maya | 9 bytes used, 11 remaining | 9 bytes used, 11 remaining | PASS |
+| Receive Eli again | Accepted, 20 bytes used | Accepted, 20 bytes used | PASS |
+| Clear inbox | 0 messages, 0 bytes used | 0 messages, 0 bytes used | PASS |
 
-Public validator result: PASS
+**Public Validator:** PASS — GitHub Actions, Assignment 3 Preflight.
 
-Expected results for the 20-byte demonstration:
+**Main Program:** All seven demonstration steps produced the expected results.
 
-| Test | Expected Result | Actual Result |
-|---|---|---|
-| Receive Maya | Accepted, 3 bytes used | Not yet recorded |
-| Receive Noah | Accepted, 12 bytes used | Not yet recorded |
-| Receive Eli | Rejected, 12 bytes used | Not yet recorded |
-| Read Maya | Read status becomes true | Not yet recorded |
-| Delete Maya | 9 bytes used | Not yet recorded |
-| Receive Eli again | Accepted, 20 bytes used | Not yet recorded |
-| Clear inbox | 0 messages, 0 bytes used | Not yet recorded |
-
-I will record the actual demonstration results
-after running main.cpp.
-
-Memory sanitizer result:
-Not yet tested.
+**Memory Checking:** The public validator passed on GitHub Actions. A separate memory sanitizer check was not performed.
 
 ## Analysis Questions
 
