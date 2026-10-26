@@ -8,7 +8,6 @@ MessageInbox::MessageInbox(std::size_t maxTextBytes)
       usedBytes(0),
       maxBytes(maxTextBytes) 
 {
-
     if (maxTextBytes == 0) 
     {
         throw std::invalid_argument("Invalid budget");
@@ -25,12 +24,10 @@ bool MessageInbox::receive(
     const std::string& sender,
     const std::string& text) 
 {
-
     if (id == 0 || sender.empty() || text.empty()) 
     {
         return false;
     }
-
     if (text.size() > remainingTextBytes()) 
     {
         return false;
